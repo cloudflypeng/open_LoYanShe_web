@@ -26,10 +26,10 @@ const showDrawer = ref(false)
       <div>
         <slot name="title">
           <NuxtLink to="/" class="font-bold text-lg text-primary-500">
-            <Icon
+            <!-- <Icon
               name="simple-icons:nuxtdotjs"
               class="font-black text-xl font-mono mr-2 inline-block"
-            />
+            /> -->
             <span class="capitalize">{{ awesome.name }}</span>
           </NuxtLink>
         </slot>
@@ -130,9 +130,7 @@ const showDrawer = ref(false)
                         open ? 'font-bold' : '',
                       ]"
                     >
-                      <span>{{
-                        parseMenuTitle(item?.title)
-                      }}</span>
+                      <span>{{ parseMenuTitle(item?.title) }}</span>
                       <Icon
                         name="carbon:chevron-right"
                         class="ml-1"
@@ -167,9 +165,7 @@ const showDrawer = ref(false)
                                   ? 'text-gray-900 dark:text-gray-100 font-bold'
                                   : 'text-gray-700 dark:text-gray-300',
                               ]"
-                              >{{
-                                parseMenuTitle(child?.title)
-                              }}</span
+                              >{{ parseMenuTitle(child?.title) }}</span
                             >
                           </NuxtLink>
                         </template>

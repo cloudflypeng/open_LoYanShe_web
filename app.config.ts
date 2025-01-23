@@ -77,7 +77,7 @@ declare module '@nuxt/schema' {
 
 export default defineAppConfig({
   awesome: {
-    name: 'Nuxt 3 Awesome Starter',
+    name: 'Lo 研社',
     description:
       'a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more.',
     project: {
@@ -88,7 +88,12 @@ export default defineAppConfig({
     layout: {
       page: {
         navbar: {
-          menus: [],
+          menus: [
+            {
+              title: '首页',
+              to: '/',
+            },
+          ],
         },
       },
       footer: {

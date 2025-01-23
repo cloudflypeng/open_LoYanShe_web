@@ -2,7 +2,7 @@ import type { AppConfigInput } from 'nuxt/schema'
 
 export default defineAppConfig({
   awesome: {
-    name: 'Nuxt 3 Awesome Starter',
+    name: 'lo 研社',
     description:
       'a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more.',
     project: {
@@ -14,28 +14,19 @@ export default defineAppConfig({
       page: {
         navbar: {
           menus: [
-            { type: 'link', title: 'Blank', to: { name: 'blank' } },
-            { type: 'link', title: 'Post', to: { name: 'post' } },
-            { type: 'link', title: 'Test', to: { name: 'test' } },
-            {
-              type: 'dropdown',
-              title: 'Documentations',
-              children: [
-                {
-                  type: 'link',
-                  title: 'Components',
-                  to: { name: 'docs-components' },
-                },
-              ],
-            },
-            { type: 'button', title: 'Setting', to: { name: 'setting' } },
-            // dynamic title
-            // {
-            //   type: 'button',
-            //   title: (nuxt) =>
-            //     (nuxt._appConfig as AppConfigInput)?.awesome?.name || '',
-            //   to: (nuxt) => (nuxt._appConfig as AppConfigInput)?.awesome?.name || '',
-            // },
+            { type: 'link', title: '首页', to: { name: 'index' } },
+            // 图鉴
+            { type: 'link', title: '图鉴', to: { name: 'library' } },
+            // 店铺
+            { type: 'link', title: '店铺', to: { name: 'shop' } },
+            // 合集
+            { type: 'link', title: '合集', to: { name: 'collections' } },
+            // 社区
+            { type: 'link', title: '社区', to: { name: 'community' } },
+            // 百科
+            { type: 'link', title: '百科', to: { name: 'wiki' } },
+            // 关于
+            { type: 'link', title: '关于', to: { name: 'about' } },
           ],
         },
       },
