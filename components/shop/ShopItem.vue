@@ -51,22 +51,40 @@ const handleJump = (id: number) => {
             loading="lazy"
           />
         </div>
-        <div class="w-full flex flex-col items-center justify-between px-3 pb-4 pt-2 min-h-[70px] relative">
+        <div class="w-full flex flex-col items-center justify-between px-4 pb-2 pt-2 relative">
           <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100 truncate w-full text-center transition-colors duration-300">
             {{ item.shop_name }}
           </h3>
           <div class="flex items-center justify-between w-full mt-1">
             <span class="text-xs text-gray-700 opacity-70 group-hover:opacity-100 transition-colors duration-300 flex items-center gap-1">
               已收录：{{ item.count_library || 0 }}
-              <div
+            </span>
+            <div
                 :style="{
                   color: item.shop_country === 0 ? 'red' : 'green'
                 }"
                 class="text-xs"
               >
-                {{ item.shop_country === 0 ? '国牌' : '日牌' }}
+                <div class="flex items-center gap-1 text-qhx-primary">
+                  <UButton
+                    variant="ghost" 
+                    color="red"
+                    size="xs"
+                    class="text-qhx-primary opacity-70 group-hover:opacity-100 transition-colors duration-300 px-1"
+                  >
+                  {{ item.shop_country === 0 ? '国牌' : '日牌' }}
+                </UButton>
+                <UButton
+                      icon="i-heroicons-heart"
+                      variant="ghost" 
+                      color="red"
+                      size="xs"
+                      class="text-qhx-primary opacity-70 group-hover:opacity-100 transition-colors duration-300 px-1 pr-2"
+                    >
+                      {{ item.likes || 0 }}
+                    </UButton>
+                </div>
               </div>
-            </span>
           </div>
         </div>
     </div>
